@@ -329,7 +329,7 @@ This section lists frequently asked array problems with brief descriptions and e
 ---
 
 ### 11. 📈 Subarray with Maximum Sum (Kadane’s Algorithm)
-**Problem:** Find the subarray with the largest sum.  
+**Problem:** Find the contiguous subarray with the largest sum.  
 **Example:** `[1, -2, 3, 4] → Max sum = 7 from [3, 4]`
 
 ---

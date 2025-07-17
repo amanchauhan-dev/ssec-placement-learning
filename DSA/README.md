@@ -1,8 +1,7 @@
----
 ## 📚 Resources for Further Practice
 
 **🎥 Videos**
-- [Algorithms By Abdul Bari (English)](https://youtu.be/0IAPZzGSbME?si=KpET9BxfNe8V8PoL)
+- [Youtube: Algorithms By Abdul Bari (English)](https://youtu.be/0IAPZzGSbME?si=KpET9BxfNe8V8PoL)
 
 
 **📘 Resources**

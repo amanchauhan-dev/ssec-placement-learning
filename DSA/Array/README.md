@@ -27,10 +27,55 @@ This section of the placement preparation repository is dedicated to mastering *
 ## 🧠 Core Concepts Explained
 
 ### What is an Array?
-An array is a **collection of elements of the same data type**, stored at **contiguous memory locations**, and accessed using an index starting from 0.
+An array is a collection of elements of the same data type stored in contiguous memory locations, allowing efficient access and manipulation using an index.
+It is the most basic linear data structure used for storing data sequentially.
 
+### 🧠 Key Characteristics:
+- Fixed-size (in static arrays).
+- All elements are of the same type (int, char, float, etc.).
+- Indexed from 0 to n-1.
+- Stored in adjacent memory cells.
+- Random access supported (you can access any element in O(1) time).
+
+### 📄 Static Array Declaration (Compile-time Size)
 ```c
-int arr[5]; // Declares an array of 5 integers
+int arr[5]; // Declares a fixed-size array of 5 integers
+arr[0] = 10;
+printf("%d", arr[0]); // Output: 10
+```
+*Memory Representation:*
+```c
+Index:     0     1     2     3     4
+Value:   [10]  [  ]  [  ]  [  ]  [  ]
+Address: 1000  1004  1008  1012  1016  (assuming int = 4 bytes)
+```
+
+### 🧾 Dynamic Array Declaration (Run-time Size)
+When the size of the array is not known at compile time, dynamic memory allocation is used with functions like malloc() or calloc() from stdlib.h.
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int *arr = (int *)malloc(n * sizeof(int)); // Allocating memory dynamically
+    for (int i = 0; i < n; i++) {
+        arr[i] = i + 1;
+    }
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    free(arr); // Always free dynamically allocated memory
+    return 0;
+}
+```
+*Memory Representation:*
+```c
+Index:     0     1     2     3     4
+Value:   [10]  [  ]  [  ]  [  ]  [  ]
+Address: 1000  1004  1008  1012  1016  (assuming int = 4 bytes)
 ```
 
 ### Common Operations:
@@ -43,12 +88,33 @@ int arr[5]; // Declares an array of 5 integers
 | Linear Search  | O(n)            |
 
 ### Use Cases:
-- Student marks list
-- Stock price history
-- Cinema seat booking
-- Graph adjacency matrix
-- String manipulation and parsing
-- Lookup tables for algorithms
+*Use Cases of Arrays Real-life:*
+- Marks of students in an exam.
+- Monthly temperature records.
+- Seat numbers in a cinema.
+
+*Technical/Programming:*
+- Storing list of items (e.g., cart in shopping apps).
+- Lookup tables (e.g., frequency count).
+- Implementing other data structures (stacks, queues, matrices).
+- Storing pixel data in image processing.
+
+---
+
+## 🧩 Static vs Dynamic Arrays in C
+
+Arrays in C can be allocated **statically** (at compile-time) or **dynamically** (at run-time). Understanding the differences is crucial for memory management and writing scalable code.
+
+### 🔍 Comparison Table
+
+| Feature             | Static Array                             | Dynamic Array                                 |
+|---------------------|-------------------------------------------|-----------------------------------------------|
+| Memory Allocation   | At **compile-time**                      | At **run-time** using `malloc()` or `calloc()` |
+| Size                | **Fixed** after declaration              | **Flexible**, can be defined at runtime        |
+| Resizing            | ❌ Not possible                          | ✅ Can be resized using `realloc()`            |
+| Memory Efficiency   | May **waste memory** if oversized        | **More efficient** if allocated carefully      |
+| Memory Location     | **Stack**                                | **Heap**                                       |
+| Memory Management   | Automatically handled                    | Requires `free()` to release memory            |
 
 ---
 

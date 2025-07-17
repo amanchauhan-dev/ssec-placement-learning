@@ -1,8 +1,11 @@
-## 📚 Topics Covered
+---
+## 📚 Resources for Further Practice
 
-Each topic contains:
-- ✅ Conceptual theory (with examples)
-- ✅ Code (in C/C++/Java/Python)
-- ✅ Common interview questions
-- ✅ Practice problems (Easy to Hard)
+**🎥 Videos**
+- [Algorithms By Abdul Bari (English)](https://youtu.be/0IAPZzGSbME?si=KpET9BxfNe8V8PoL)
 
+
+**📘 Resources**
+- [GeeksforGeeks: DSA with Java](https://www.geeksforgeeks.org/dsa/dsa-in-java/)
+- [InterviewBit Practice: Arrays](https://www.interviewbit.com/practice/)
+---
